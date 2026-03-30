@@ -1,0 +1,333 @@
+<html class="k-dark dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CDM PAJARERO | Santa Cruz del Valle</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed": "#40b5f6",
+                        "primary-dim": "#2ba7e7",
+                        "on-error": "#490006",
+                        "surface-container-low": "#131313",
+                        "surface-dim": "#0e0e0e",
+                        "error-container": "#9f0519",
+                        "on-tertiary-container": "#5b4b00",
+                        "primary-container": "#30aaea",
+                        "outline": "#767575",
+                        "on-primary-fixed": "#00121e",
+                        "on-surface": "#ffffff",
+                        "on-primary-fixed-variant": "#003954",
+                        "surface": "#0e0e0e",
+                        "on-primary-container": "#002639",
+                        "primary": "#44b8f8",
+                        "secondary-fixed-dim": "#d1de00",
+                        "on-error-container": "#ffa8a3",
+                        "inverse-primary": "#006591",
+                        "tertiary-fixed-dim": "#efc900",
+                        "tertiary-fixed": "#ffd709",
+                        "inverse-surface": "#fcf9f8",
+                        "outline-variant": "#484847",
+                        "on-surface-variant": "#adaaaa",
+                        "secondary": "#e0ed1d",
+                        "secondary-container": "#5d6300",
+                        "error": "#ff716c",
+                        "on-secondary-fixed-variant": "#5a6000",
+                        "on-primary": "#00324a",
+                        "surface-variant": "#262626",
+                        "background": "#0e0e0e",
+                        "tertiary-dim": "#efc900",
+                        "on-secondary": "#505600",
+                        "surface-bright": "#2c2c2c",
+                        "on-tertiary": "#655400",
+                        "surface-container": "#1a1a1a",
+                        "inverse-on-surface": "#565555",
+                        "secondary-fixed": "#e0ed1d",
+                        "secondary-dim": "#d1de00",
+                        "tertiary-container": "#ffd709",
+                        "on-secondary-fixed": "#3e4300",
+                        "on-tertiary-fixed": "#453900",
+                        "tertiary": "#ffe792",
+                        "on-background": "#ffffff",
+                        "surface-container-highest": "#262626",
+                        "on-tertiary-fixed-variant": "#665500",
+                        "surface-container-high": "#20201f",
+                        "surface-container-lowest": "#000000",
+                        "on-secondary-container": "#f7ff93",
+                        "surface-tint": "#44b8f8",
+                        "error-dim": "#d7383b",
+                        "primary-fixed-dim": "#2ba7e7"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Lexend"],
+                        "label": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #44b8f8 0%, #30aaea 100%);
+        }
+        .glass-panel {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(255,255,255,0.1);
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary selection:text-on-secondary">
+<!-- Navegación superior -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-2xl shadow-sky-900/20">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="flex items-center gap-3">
+<img alt="Foto 5 del club" class="h-12 w-auto object-contain brightness-110" src="5.jpeg"/>
+<div class="hidden sm:block text-xl font-black italic tracking-tighter text-sky-400 dark:text-sky-400 font-headline uppercase">
+                    CDM PAJARERO
+                </div>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-headline uppercase tracking-tighter text-sky-400 dark:text-sky-400 border-b-2 border-yellow-400 pb-1" href="#">Info del Club</a>
+<a class="font-headline uppercase tracking-tighter text-zinc-400 dark:text-zinc-500 hover:text-white transition-colors" href="https://cdmpajarero.imgbb.com" rel="noopener noreferrer" target="_blank">Fotos</a>
+<a class="font-headline uppercase tracking-tighter text-zinc-400 dark:text-zinc-500 hover:text-white transition-colors" href="#">Carreras</a>
+<a class="font-headline uppercase tracking-tighter text-zinc-400 dark:text-zinc-500 hover:text-white transition-colors" href="#">Contacto</a>
+</div>
+<button class="bg-secondary text-on-secondary px-6 py-2 rounded-md font-headline font-bold uppercase tracking-widest text-sm hover:translate-y-[-4px] transition-all duration-300 shadow-lg shadow-secondary/10 active:scale-95">
+                Únete al Club
+            </button>
+</div>
+</nav>
+<!-- Sección hero -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60 grayscale-[0.3]" data-alt="Foto 6 del club" src="6.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-8 flex flex-col justify-center">
+<span class="inline-block bg-secondary text-on-secondary font-headline font-black px-3 py-1 mb-6 text-sm tracking-[0.2em] uppercase max-w-fit">
+                    Santa Cruz del Valle (Ávila)
+                </span>
+<h1 class="font-headline font-black italic text-6xl md:text-9xl uppercase tracking-tighter leading-[0.85] mb-8">CDM <br/> <span class="text-primary">PAJARERO</span></h1>
+<p class="text-xl md:text-2xl font-light text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                    Un colectivo técnico para atletas de montaña en el corazón de la sierra. Dominamos los senderos y conquistamos las cumbres. Únete a la bandada.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="kinetic-gradient text-on-primary-container font-headline font-bold px-8 py-4 uppercase tracking-wider rounded-md flex items-center gap-3 group">
+                        Inscríbete para mayo de 2026
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+<button class="bg-surface-variant/50 backdrop-blur-md border border-outline-variant/20 px-8 py-4 font-headline font-bold uppercase tracking-wider rounded-md hover:bg-surface-variant transition-colors">
+                        Historia del Club
+                    </button>
+</div>
+</div>
+<div class="md:col-span-4 hidden md:flex flex-col justify-end items-end pb-20">
+<div class="bg-surface-container-highest/40 backdrop-blur-xl p-8 border-l-4 border-secondary max-w-xs">
+<h3 class="font-headline font-bold text-secondary text-sm uppercase tracking-widest mb-4">Pulso Actual</h3>
+<div class="space-y-6">
+<div>
+<span class="block text-xs uppercase text-on-surface-variant mb-1">Miembros Activos</span>
+<span class="text-4xl font-headline font-black">240+</span>
+</div>
+<div>
+<span class="block text-xs uppercase text-on-surface-variant mb-1">Desnivel / Sem.</span>
+<span class="text-4xl font-headline font-black">12.5K<span class="text-sm font-normal text-primary">m</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Info del club -->
+<section class="py-32 bg-surface-dim relative">
+<div class="absolute top-0 right-0 pointer-events-none opacity-5">
+<span class="font-headline font-black text-[20rem] uppercase text-stroke italic leading-none select-none">
+                BANDADA
+            </span>
+</div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-start">
+<div class="space-y-12">
+<div class="space-y-4">
+<h2 class="font-headline font-black italic text-5xl uppercase tracking-tighter">El ADN <span class="text-primary">Pajarero</span></h2>
+<div class="w-24 h-2 bg-secondary"></div>
+</div>
+<p class="text-lg text-on-surface-variant leading-relaxed font-light">
+                        Nacido en el terreno salvaje de Santa Cruz del Valle (Ávila), CDM Pajarero es un ecosistema técnico de rendimiento en altura. Combinamos protocolos de entrenamiento táctico con una comunidad que vive por el esfuerzo y las vistas desde la cima.
+                    </p>
+<div class="grid grid-cols-2 gap-8">
+<div class="bg-surface-container-low p-6 space-y-3 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-4xl" data-weight="fill">terrain</span>
+<h4 class="font-headline font-bold uppercase text-sm tracking-widest">Carrera por Montaña</h4>
+<p class="text-sm text-on-surface-variant">Sesiones técnicas de trail por los picos graníticos de Ávila.</p>
+</div>
+<div class="bg-surface-container-low p-6 space-y-3 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-4xl" data-weight="fill">hiking</span>
+<h4 class="font-headline font-bold uppercase text-sm tracking-widest">Marcha Senderista</h4>
+<p class="text-sm text-on-surface-variant">Senderismo técnico y exploración de montaña para todos los niveles.</p>
+</div>
+</div>
+</div>
+<div class="relative grid grid-cols-2 gap-4">
+<div class="pt-12">
+<img class="w-full aspect-[4/5] object-cover rounded-lg shadow-2xl" data-alt="Foto 7 del club" src="7.jpeg"/>
+</div>
+<div>
+<img class="w-full aspect-[4/5] object-cover rounded-lg shadow-2xl" data-alt="Foto 8 del club" src="8.jpeg"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-primary text-on-primary-container p-8 font-headline italic font-black text-2xl uppercase leading-none shadow-xl">
+                        Impulsados por <br/> el desnivel.
+                    </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Fotos del club: avance de galería -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8 mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
+<div>
+<span class="text-secondary font-headline font-bold uppercase tracking-[0.3em] text-xs">Archivo Visual</span>
+<h2 class="font-headline font-black italic text-5xl uppercase tracking-tighter mt-4">Intensidad <span class="text-primary">Capturada</span></h2>
+</div>
+<a class="group flex items-center gap-4 font-headline font-bold uppercase tracking-widest text-sm text-on-surface-variant hover:text-white transition-colors" href="https://cdmpajarero.imgbb.com" rel="noopener noreferrer" target="_blank">
+                Ver Galería Completa
+                <span class="h-[1px] w-12 bg-secondary group-hover:w-20 transition-all"></span>
+</a>
+</div>
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-[800px]">
+<div class="md:col-span-2 md:row-span-2 relative overflow-hidden group rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Foto 9 del club" src="9.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<span class="text-secondary text-sm font-bold uppercase tracking-widest">Galería 01</span>
+<h4 class="font-headline font-black italic text-2xl uppercase">Momento Destacado</h4>
+</div>
+</div>
+<div class="md:col-span-1 md:row-span-1 relative overflow-hidden group rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Foto 10 del club" src="10.jpeg"/>
+<div class="absolute inset-0 bg-surface/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-white">fullscreen</span>
+</div>
+</div>
+<div class="md:col-span-1 md:row-span-2 relative overflow-hidden group rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Foto 11 del club" src="11.jpeg"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
+</div>
+<div class="md:col-span-1 md:row-span-1 relative overflow-hidden group rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Foto 12 del club" src="12.jpeg"/>
+</div>
+</div>
+</section>
+<!-- Sección de próximos eventos -->
+<section class="py-32 bg-surface-dim border-y border-white/5 relative overflow-hidden">
+<div class="absolute left-0 bottom-0 pointer-events-none opacity-5">
+<span class="font-headline font-black text-[15rem] uppercase text-stroke italic leading-none select-none">
+                CALENDARIO
+            </span>
+</div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+<div class="space-y-4">
+<h2 class="font-headline font-black italic text-5xl uppercase tracking-tighter">Próximos <span class="text-primary">Eventos</span></h2>
+<div class="w-24 h-2 bg-secondary"></div>
+</div>
+<p class="text-on-surface-variant font-headline font-bold uppercase tracking-widest text-sm max-w-xs text-right">
+                    Consulta los próximos campos de batalla de la bandada en Santa Cruz del Valle.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Tarjeta de evento 1 -->
+<div class="group relative aspect-[4/5] overflow-hidden rounded-lg bg-zinc-900 flex flex-col justify-end p-8 border border-white/5 hover:border-primary/50 transition-all duration-500">
+<div class="absolute inset-0 z-0">
+<img alt="Foto 5 del club" class="w-full h-full object-cover opacity-30 grayscale group-hover:scale-110 transition-transform duration-700" src="5.jpeg"/>
+</div>
+<div class="relative z-10">
+<span class="bg-primary text-on-primary-container px-3 py-1 font-headline font-bold text-xs uppercase tracking-widest mb-4 inline-block">2-3 MAYO 2026</span>
+<h3 class="font-headline font-black italic text-3xl uppercase tracking-tight mb-2">Trail Rápido <br/>PAJARERO</h3>
+<p class="text-on-surface-variant font-bold text-lg mb-6">11K | 650D+</p>
+<button class="w-full py-4 border border-primary/30 font-headline font-bold uppercase tracking-widest text-sm group-hover:bg-primary group-hover:text-on-primary-container transition-colors">Inscribirse</button>
+</div>
+</div>
+<!-- Tarjeta de evento 2 -->
+<div class="group relative aspect-[4/5] overflow-hidden rounded-lg bg-zinc-900 flex flex-col justify-end p-8 border border-white/5 hover:border-secondary/50 transition-all duration-500">
+<div class="absolute inset-0 z-0">
+<img alt="Foto 6 del club" class="w-full h-full object-cover opacity-30 grayscale group-hover:scale-110 transition-transform duration-700" src="6.jpeg"/>
+</div>
+<div class="relative z-10">
+<span class="bg-secondary text-on-secondary px-3 py-1 font-headline font-bold text-xs uppercase tracking-widest mb-4 inline-block">2-3 MAYO 2026</span>
+<h3 class="font-headline font-black italic text-3xl uppercase tracking-tight mb-2">Trail Largo <br/>PAJARERO</h3>
+<p class="text-on-surface-variant font-bold text-lg mb-6">23K | 1350D+</p>
+<button class="w-full py-4 border border-secondary/30 font-headline font-bold uppercase tracking-widest text-sm group-hover:bg-secondary group-hover:text-on-secondary transition-colors">Inscribirse</button>
+</div>
+</div>
+<!-- Tarjeta de evento 3 -->
+<div class="group relative aspect-[4/5] overflow-hidden rounded-lg bg-zinc-900 flex flex-col justify-end p-8 border border-white/5 hover:border-white/50 transition-all duration-500">
+<div class="absolute inset-0 z-0">
+<img alt="Foto 7 del club" class="w-full h-full object-cover opacity-30 grayscale group-hover:scale-110 transition-transform duration-700" src="7.jpeg"/>
+</div>
+<div class="relative z-10">
+<span class="bg-on-surface-variant text-surface px-3 py-1 font-headline font-bold text-xs uppercase tracking-widest mb-4 inline-block">2-3 MAYO 2026</span>
+<h3 class="font-headline font-black italic text-3xl uppercase tracking-tight mb-2">Marcha <br/>Senderista</h3>
+<p class="text-on-surface-variant font-bold text-lg mb-6">9KM | 350D+</p>
+<button class="w-full py-4 border border-outline-variant/30 font-headline font-bold uppercase tracking-widest text-sm group-hover:bg-white group-hover:text-black transition-colors">Inscribirse</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pie de página -->
+<footer class="bg-surface-container-lowest py-20 px-8 border-t border-white/5">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2 space-y-8">
+<div class="flex items-center gap-4">
+<img alt="Foto 8 del club" class="h-16 w-auto object-contain brightness-110" src="8.jpeg"/>
+<div class="text-3xl font-black italic tracking-tighter text-sky-400 font-headline uppercase">
+                        CDM PAJARERO
+                    </div>
+</div>
+<p class="text-on-surface-variant max-w-sm leading-relaxed">
+                    Colectivo técnico de montaña con base en Santa Cruz del Valle (Ávila). Dominando el mundo vertical desde 2018.
+                </p>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-2xl">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-2xl">mail</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-2xl">share</span></a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-headline font-bold uppercase tracking-widest text-sm text-primary">Información</h4>
+<nav class="flex flex-col gap-4">
+<a class="text-on-surface-variant hover:text-white transition-colors text-sm uppercase tracking-wider" href="#">Sobre el Club</a>
+<a class="text-on-surface-variant hover:text-white transition-colors text-sm uppercase tracking-wider" href="#">Reglamento de Carreras</a>
+<a class="text-on-surface-variant hover:text-white transition-colors text-sm uppercase tracking-wider" href="#">Política de Privacidad</a>
+</nav>
+</div>
+<div class="space-y-6">
+<h4 class="font-headline font-bold uppercase tracking-widest text-sm text-secondary">Contacto</h4>
+<p class="text-on-surface-variant text-sm uppercase tracking-widest leading-loose">
+                    Santa Cruz del Valle <br/>
+                    Ávila, España <br/>
+                    info@cdmpajarero.es
+                </p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex justify-between items-center text-[10px] uppercase tracking-[0.3em] text-on-surface-variant/40">
+<span>© 2024 CDM PAJARERO COLECTIVO TÉCNICO</span>
+<span>DISEÑO POR ALPINE VELOCITY</span>
+</div>
+</footer>
+</body></html>
