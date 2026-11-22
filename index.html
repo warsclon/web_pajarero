@@ -14,7 +14,7 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&amp;family=DM+Sans:wght@400;500;600&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&amp;family=DM+Sans:wght@400;500;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script>
 tailwind.config = {
@@ -29,6 +29,7 @@ tailwind.config = {
         charcoal: "#26241F",
         army: "#55603A",
         army2: "#3F482B",
+        night: "#2A3020",
         lichen: "#B3B993",
         apricot: "#C97B43",
         apricotsoft: "#EDC3A0"
@@ -45,191 +46,177 @@ tailwind.config = {
 <style>
   body { font-family: "DM Sans", system-ui, sans-serif; background: #F6F1E7; color: #26241F; -webkit-font-smoothing: antialiased; }
   .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-  .font-display { letter-spacing: -0.015em; font-weight: 400; }
+  .font-display { letter-spacing: -0.015em; }
   .eyebrow { font-family: "DM Mono", monospace; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; }
   .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .js .reveal.in { opacity: 1; transform: none; }
+  .fade-swap { transition: opacity .35s ease; }
+  .fade-swap.out { opacity: 0; }
+  .titulo-linea { display:inline-block; border-bottom: 2px solid #C97B43; padding-bottom: .35rem; }
   :focus-visible { outline: 2px solid #C97B43; outline-offset: 3px; }
-  @media (prefers-reduced-motion: reduce) { .js .reveal { opacity:1; transform:none; transition:none; } html { scroll-behavior:auto; } }
+  @media (prefers-reduced-motion: reduce) { .js .reveal { opacity:1; transform:none; transition:none; } .fade-swap { transition:none; } html { scroll-behavior:auto; } }
 </style>
 </head>
 <body class="selection:bg-apricotsoft selection:text-charcoal">
 
 <a href="#contacto" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] bg-army text-cream px-4 py-2 rounded">Ir al contacto</a>
 
-<!-- Navegación -->
-<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-cream/90 backdrop-blur-md border-b border-transparent">
-  <div class="max-w-6xl mx-auto flex items-center justify-between px-5 md:px-8 h-20">
-    <a href="#inicio" class="flex items-center gap-3" aria-label="Club de Montaña Pajarero, inicio">
-      <img src="logo.png" alt="" class="h-12 w-12 object-contain mix-blend-multiply"/>
-      <span class="font-display text-lg leading-tight hidden sm:block">Club de Montaña<br/>Pajarero</span>
+<!-- Cabecera: logo grande y menú debajo -->
+<header>
+  <div class="max-w-6xl mx-auto px-5 md:px-8 py-4 flex items-center justify-between">
+    <a href="#inicio" class="flex items-center gap-4" aria-label="Club de Montaña Pajarero, inicio">
+      <img src="logo.png" alt="Escudo del Club de Montaña Pajarero" class="h-20 md:h-24 w-auto object-contain mix-blend-multiply"/>
+      <span class="font-display text-2xl md:text-3xl leading-[1.05] hidden sm:block">Club de Montaña<br/><span class="text-army italic">Pajarero</span></span>
     </a>
-    <nav class="hidden md:flex items-center gap-10 text-sm text-graphite" aria-label="Principal">
-      <a href="#club" class="hover:text-army transition-colors">El club</a>
-      <a href="#carreras" class="hover:text-army transition-colors">Carreras</a>
-      <a href="#galeria" class="hover:text-army transition-colors">Galería</a>
-      <a href="https://cdmpajarero.imgbb.com" target="_blank" rel="noopener noreferrer" class="hover:text-army transition-colors">Fotos</a>
-      <a href="#contacto" data-contacto="" class="hover:text-army transition-colors">Contacto</a>
-    </nav>
-    <div class="flex items-center gap-2">
-      <a href="#contacto" data-contacto="Quiero unirme al club" class="bg-army text-cream px-5 py-2.5 rounded-md text-sm font-medium hover:bg-army2 transition-colors">Únete al club</a>
-      <button id="menu-btn" class="md:hidden p-2" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
-        <span class="material-symbols-outlined text-3xl">menu</span>
-      </button>
-    </div>
+    <p class="hidden lg:block eyebrow text-stone text-right leading-relaxed">Santa Cruz del Valle<br/>Ávila · desde 2023</p>
   </div>
-  <nav id="menu-movil" class="hidden md:hidden bg-cream border-t border-sand2/60 px-5 pb-6 pt-2" aria-label="Móvil">
-    <a href="#club" class="block py-3 font-display text-2xl">El club</a>
-    <a href="#carreras" class="block py-3 font-display text-2xl">Carreras</a>
-    <a href="#galeria" class="block py-3 font-display text-2xl">Galería</a>
-    <a href="https://cdmpajarero.imgbb.com" target="_blank" rel="noopener noreferrer" class="block py-3 font-display text-2xl">Todas las fotos</a>
-    <a href="#contacto" data-contacto="" class="block py-3 font-display text-2xl">Contacto</a>
-  </nav>
+  <div id="barra" class="sticky top-0 z-50 bg-cream/95 backdrop-blur-md border-y-2 border-army">
+    <div class="max-w-6xl mx-auto px-5 md:px-8 h-14 flex items-center justify-between">
+      <nav class="hidden md:flex items-center gap-9 text-[0.8rem] font-semibold uppercase tracking-[0.12em] text-graphite" aria-label="Principal">
+        <a href="#inicio" class="text-army">Inicio</a>
+        <a href="#pruebas" class="hover:text-army transition-colors">Pruebas</a>
+        <a href="#club" class="hover:text-army transition-colors">El club</a>
+        <a href="#pueblo" class="hover:text-army transition-colors">El pueblo</a>
+        <a href="#galeria" class="hover:text-army transition-colors">Galería</a>
+        <a href="#contacto" data-contacto="" class="hover:text-army transition-colors">Contacto</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em]" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
+        <span class="material-symbols-outlined text-3xl">menu</span>Menú
+      </button>
+      <a href="#contacto" data-contacto="Quiero unirme al club" class="bg-army text-cream px-5 py-2 rounded-md text-sm font-medium hover:bg-army2 transition-colors">Únete al club</a>
+    </div>
+    <nav id="menu-movil" class="hidden md:hidden bg-cream border-t border-sand2/60 px-5 pb-6 pt-2" aria-label="Móvil">
+      <a href="#inicio" class="block py-3 font-display text-2xl">Inicio</a>
+      <a href="#pruebas" class="block py-3 font-display text-2xl">Pruebas</a>
+      <a href="#club" class="block py-3 font-display text-2xl">El club</a>
+      <a href="#pueblo" class="block py-3 font-display text-2xl">El pueblo</a>
+      <a href="#galeria" class="block py-3 font-display text-2xl">Galería</a>
+      <a href="#contacto" data-contacto="" class="block py-3 font-display text-2xl">Contacto</a>
+    </nav>
+  </div>
 </header>
 
-<!-- Inicio -->
-<section id="inicio" class="pt-28 md:pt-32">
-  <div class="max-w-6xl mx-auto px-5 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16 items-center pb-16 md:pb-24">
-    <div class="md:col-span-6">
-      <p class="eyebrow text-army mb-6 flex items-center gap-3"><span class="h-px w-8 bg-apricot"></span>Santa Cruz del Valle · Ávila · desde 2023</p>
-      <h1 class="font-display text-5xl sm:text-6xl lg:text-[4.25rem] leading-[1.02]">
-        Montaña, trail y <em class="text-apricot">buena compañía</em>.
-      </h1>
-      <p class="mt-7 text-lg text-graphite max-w-md leading-relaxed">
-        Somos el Club de Montaña Pajarero: corremos, caminamos y organizamos pruebas en la sierra de Ávila. Ven a probar un día y únete a la bandada.
-      </p>
-      <div class="mt-9 flex flex-wrap gap-3">
-        <a href="#contacto" data-contacto="Inscripción a una carrera" class="group inline-flex items-center gap-3 bg-army text-cream font-medium px-6 py-3.5 rounded-md hover:bg-army2 transition-colors">
-          Inscríbete para mayo de 2026
-          <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-        </a>
-        <a href="#club" class="inline-flex items-center px-6 py-3.5 rounded-md border border-charcoal/25 font-medium hover:border-army hover:text-army transition-colors">Conoce el club</a>
+<!-- Carrusel de pruebas: anterior · actual · siguiente -->
+<section id="inicio" aria-roledescription="carrusel" aria-label="Próximas pruebas">
+  <div class="grid md:grid-cols-[1fr_1.9fr_1fr] h-[74vh] min-h-[480px] max-h-[760px] bg-night">
+    <button id="ev-prev" type="button" class="hidden md:block relative overflow-hidden group" aria-label="Prueba anterior">
+      <img id="img-prev" src="" alt="" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity"/>
+    </button>
+    <div class="relative overflow-hidden">
+      <img id="img-act" src="" alt="" class="absolute inset-0 w-full h-full object-cover fade-swap"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-night/90 via-night/25 to-transparent"></div>
+      <div id="txt-act" class="absolute inset-x-0 bottom-0 p-6 md:p-10 text-center text-cream fade-swap">
+        <p id="ev-fecha" class="eyebrow text-apricotsoft"></p>
+        <h1 id="ev-titulo" class="font-display font-semibold uppercase text-5xl md:text-7xl leading-[0.95] mt-3"></h1>
+        <p id="ev-datos" class="font-mono text-sm mt-4 text-cream/85"></p>
+        <a href="#contacto" data-contacto="Inscripción a una carrera" class="mt-7 inline-flex items-center gap-3 bg-cream text-army2 font-semibold px-6 py-3 rounded-md hover:bg-apricotsoft transition-colors">Inscribirse <span class="material-symbols-outlined">arrow_forward</span></a>
       </div>
     </div>
-    <div class="md:col-span-6">
-      <img src="9.jpeg" alt="Corredor del club entre rocas y niebla en la sierra" class="w-full aspect-[4/5] md:aspect-[5/6] object-cover rounded-sm"/>
+    <button id="ev-next" type="button" class="hidden md:block relative overflow-hidden group" aria-label="Prueba siguiente">
+      <img id="img-next" src="" alt="" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity"/>
+    </button>
+  </div>
+  <div class="border-b border-sand2/70">
+    <div class="max-w-6xl mx-auto px-5 md:px-8 py-4 flex items-center justify-between text-sm font-semibold uppercase tracking-[0.12em]">
+      <button id="ev-prev2" type="button" class="flex items-center gap-2 text-graphite hover:text-army transition-colors"><span class="material-symbols-outlined">arrow_back</span><span class="hidden sm:inline">Prueba anterior</span></button>
+      <div id="puntos" class="flex gap-2" aria-hidden="true"></div>
+      <button id="ev-next2" type="button" class="flex items-center gap-2 text-graphite hover:text-army transition-colors"><span class="hidden sm:inline">Próxima prueba</span><span class="material-symbols-outlined">arrow_forward</span></button>
     </div>
   </div>
-  <div class="border-y border-sand2/70">
-    <dl class="max-w-6xl mx-auto px-5 md:px-8 grid grid-cols-3 divide-x divide-sand2/70 text-center md:text-left">
-      <div class="py-6 md:px-6 first:md:pl-0"><dt class="eyebrow text-stone">Socios y socias</dt><dd class="font-display text-3xl md:text-4xl mt-1">81</dd></div>
-      <div class="py-6 px-2 md:px-6"><dt class="eyebrow text-stone">Fundado en</dt><dd class="font-display text-3xl md:text-4xl mt-1">2023</dd></div>
-      <div class="py-6 px-2 md:px-6"><dt class="eyebrow text-stone">Próxima cita</dt><dd class="font-display text-3xl md:text-4xl mt-1">2-3 mayo</dd></div>
-    </dl>
+</section>
+
+<!-- Banda: nombre del club -->
+<section class="bg-army2 text-cream">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20 grid md:grid-cols-12 gap-8 items-center">
+    <h2 class="md:col-span-5 font-display italic font-medium uppercase text-3xl md:text-4xl leading-tight md:text-right md:pr-8 md:border-r-2 border-apricot reveal">Club de Montaña<br/>Pajarero</h2>
+    <p class="md:col-span-7 md:pl-4 text-lg text-cream/85 leading-relaxed reveal">
+      Somos un club de Santa Cruz del Valle (Ávila) con 81 socios y socias. Corremos, caminamos y organizamos pruebas en la sierra: trail running, senderismo y buena compañía, a cualquier nivel.
+    </p>
+  </div>
+</section>
+
+<!-- Nuestras pruebas -->
+<section id="pruebas" class="py-24 md:py-28 scroll-mt-16">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+    <div class="reveal">
+      <img src="12.jpeg" alt="Socios del club con dorsal en una carrera" class="w-full aspect-[4/3] object-cover rounded-sm shadow-[0_18px_40px_-18px_rgba(38,36,31,0.45)]" loading="lazy"/>
+    </div>
+    <div class="reveal">
+      <h2 class="font-display italic font-medium uppercase text-3xl md:text-4xl text-army"><span class="titulo-linea">Nuestras pruebas</span></h2>
+      <p class="mt-8 text-graphite leading-relaxed">Durante el año organizamos y participamos en pruebas de trail y marchas senderistas por la sierra. Todas con la esencia de nuestra montaña y la compañía de los mejores deportistas.</p>
+      <p class="mt-4 text-graphite leading-relaxed">El próximo 2 y 3 de mayo de 2026: Trail Rápido (11 km), Trail Largo (23 km) y Marcha Senderista (9 km). ¿Te apuntas?</p>
+      <a href="#contacto" data-contacto="Inscripción a una carrera" class="mt-8 inline-flex items-center gap-2 bg-apricot text-cream px-7 py-3 rounded-md text-sm font-semibold uppercase tracking-[0.12em] hover:bg-army transition-colors">Inscribirme <span class="material-symbols-outlined text-xl">arrow_forward</span></a>
+    </div>
   </div>
 </section>
 
 <!-- El club -->
-<section id="club" class="py-24 md:py-32 scroll-mt-16">
-  <div class="max-w-6xl mx-auto px-5 md:px-8 grid md:grid-cols-12 gap-12 md:gap-20 items-start">
-    <div class="md:col-span-5 reveal md:sticky md:top-28">
-      <p class="eyebrow text-army mb-4">01 — El club</p>
-      <h2 class="font-display text-4xl md:text-5xl leading-[1.05]">Un club de pueblo con <em class="text-apricot">vistas de cumbre</em>.</h2>
-      <p class="mt-6 text-graphite leading-relaxed">
-        Nacimos en Santa Cruz del Valle para disfrutar de la montaña en grupo, a cualquier nivel. Entrenamos, salimos de ruta y organizamos nuestras propias pruebas. Si quieres sumar kilómetros con buena gente, aquí tienes sitio.
-      </p>
-      <img src="8.jpeg" alt="Socios del club con la bandera Pajarero tras una carrera" class="mt-8 w-full aspect-[4/3] object-cover rounded-sm" loading="lazy"/>
+<section id="club" class="py-24 md:py-28 bg-sand scroll-mt-16">
+  <div class="max-w-6xl mx-auto px-5 md:px-8">
+    <div class="max-w-2xl reveal">
+      <h2 class="font-display italic font-medium uppercase text-3xl md:text-4xl text-army"><span class="titulo-linea">Lo que hacemos</span></h2>
+      <p class="mt-8 text-graphite leading-relaxed">Un club de pueblo con vistas de cumbre. Entrenamos, salimos de ruta y organizamos nuestras propias pruebas durante todo el año.</p>
     </div>
-    <div class="md:col-span-7 reveal">
-      <div class="grid sm:grid-cols-2 border-y border-sand2/70 divide-y sm:divide-y-0 sm:divide-x divide-sand2/70">
-        <div class="py-8 sm:pr-8">
-          <span class="material-symbols-outlined text-army text-3xl">terrain</span>
-          <h3 class="font-display text-2xl mt-3">Trail running</h3>
-          <p class="text-graphite mt-2">Entrenos y carreras por los senderos de Ávila.</p>
-        </div>
-        <div class="py-8 sm:pl-8">
-          <span class="material-symbols-outlined text-army text-3xl">hiking</span>
-          <h3 class="font-display text-2xl mt-3">Senderismo</h3>
-          <p class="text-graphite mt-2">Rutas y marchas para todos los niveles.</p>
-        </div>
-      </div>
-      <p class="eyebrow text-stone mt-14 mb-2">Lo que hacemos durante el año</p>
-      <ol class="font-display text-xl md:text-2xl">
-        <li class="flex items-baseline gap-6 py-4 border-b border-sand2/70"><span class="font-mono text-xs text-apricot">01</span>Trail Pajarero y ruta senderista</li>
-        <li class="flex items-baseline gap-6 py-4 border-b border-sand2/70"><span class="font-mono text-xs text-apricot">02</span>I y II Ruta Gredos</li>
-        <li class="flex items-baseline gap-6 py-4 border-b border-sand2/70"><span class="font-mono text-xs text-apricot">03</span>Nocturna 5 Villas</li>
-        <li class="flex items-baseline gap-6 py-4 border-b border-sand2/70"><span class="font-mono text-xs text-apricot">04</span>San Silvestre Pajarera</li>
-        <li class="flex items-baseline gap-6 py-4 border-b border-sand2/70"><span class="font-mono text-xs text-apricot">05</span>Subida a La Calzada</li>
-      </ol>
+    <div class="mt-12 grid md:grid-cols-3 gap-6">
+      <article class="reveal bg-cream rounded-sm p-8 flex flex-col">
+        <span class="material-symbols-outlined text-army text-4xl">terrain</span>
+        <h3 class="font-display italic font-medium uppercase text-2xl text-apricot mt-5">Trail running</h3>
+        <p class="text-graphite mt-3 leading-relaxed flex-1">Entrenos y carreras por los senderos de Ávila. Trail Pajarero, Nocturna 5 Villas, San Silvestre Pajarera y Subida a La Calzada.</p>
+        <a href="#pruebas" class="mt-6 self-start border-b border-army text-army text-sm font-semibold uppercase tracking-[0.12em] pb-1 hover:text-apricot hover:border-apricot transition-colors">Ver pruebas</a>
+      </article>
+      <article class="reveal bg-cream rounded-sm p-8 flex flex-col">
+        <span class="material-symbols-outlined text-army text-4xl">hiking</span>
+        <h3 class="font-display italic font-medium uppercase text-2xl text-apricot mt-5">Senderismo</h3>
+        <p class="text-graphite mt-3 leading-relaxed flex-1">Rutas y marchas para todos los niveles, como la I y II Ruta Gredos y la ruta senderista del Trail Pajarero.</p>
+        <a href="#contacto" data-contacto="Quiero unirme al club" class="mt-6 self-start border-b border-army text-army text-sm font-semibold uppercase tracking-[0.12em] pb-1 hover:text-apricot hover:border-apricot transition-colors">Unirme</a>
+      </article>
+      <article class="reveal bg-cream rounded-sm p-8 flex flex-col">
+        <span class="material-symbols-outlined text-army text-4xl">photo_camera</span>
+        <h3 class="font-display italic font-medium uppercase text-2xl text-apricot mt-5">Galería</h3>
+        <p class="text-graphite mt-3 leading-relaxed flex-1">Habilitamos una galería con las fotos de nuestras pruebas y salidas. Revive los mejores momentos de la bandada.</p>
+        <a href="https://cdmpajarero.imgbb.com" target="_blank" rel="noopener noreferrer" class="mt-6 self-start border-b border-army text-army text-sm font-semibold uppercase tracking-[0.12em] pb-1 hover:text-apricot hover:border-apricot transition-colors">Ver fotos</a>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- Carreras -->
-<section id="carreras" class="py-24 md:py-32 bg-sand scroll-mt-16">
-  <div class="max-w-6xl mx-auto px-5 md:px-8">
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 reveal">
-      <div>
-        <p class="eyebrow text-army mb-4">02 — Calendario</p>
-        <h2 class="font-display text-4xl md:text-5xl leading-[1.05]">Próximas <em class="text-apricot">pruebas</em></h2>
-      </div>
-      <p class="text-graphite max-w-sm">2 y 3 de mayo de 2026 en Santa Cruz del Valle. Elige distancia y apúntate en un clic.</p>
+<!-- El pueblo -->
+<section id="pueblo" class="bg-night text-cream scroll-mt-16">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 py-24 md:py-28 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+    <div class="reveal md:text-right">
+      <h2 class="font-display italic font-medium uppercase text-3xl md:text-4xl text-apricotsoft"><span class="titulo-linea">Santa Cruz del Valle</span></h2>
+      <p class="mt-8 text-cream/80 leading-relaxed">Somos un pueblo de la provincia de Ávila y esta es nuestra base. Desde aquí salen nuestras rutas y carreras, entre senderos, rocas y encinares, y a aquí volvemos siempre juntos.</p>
+      <a href="#contacto" data-contacto="Otra consulta" class="mt-8 inline-flex items-center gap-2 border border-cream/40 px-7 py-3 rounded-md text-sm font-semibold uppercase tracking-[0.12em] hover:bg-cream hover:text-night transition-colors">Saber más <span class="material-symbols-outlined text-xl">arrow_forward</span></a>
     </div>
-    <div class="grid md:grid-cols-3 gap-6">
-      <article class="reveal group bg-cream rounded-sm overflow-hidden flex flex-col">
-        <div class="overflow-hidden aspect-[4/3]">
-          <img src="10.jpeg" alt="Corredor del club en un tramo técnico de roca" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
-        </div>
-        <div class="p-7 flex flex-col flex-1">
-          <p class="eyebrow text-stone">2-3 mayo 2026</p>
-          <h3 class="font-display text-3xl mt-2 leading-tight">Trail Rápido Pajarero</h3>
-          <p class="font-mono text-sm text-graphite mt-4 flex gap-4"><span>11 km</span><span class="text-sand2">|</span><span>+650 m</span></p>
-          <a href="#contacto" data-contacto="Inscripción a una carrera" class="mt-8 inline-flex items-center justify-between border-t border-sand2 pt-4 font-medium text-army group-hover:text-apricot transition-colors">Inscribirse <span class="material-symbols-outlined">arrow_forward</span></a>
-        </div>
-      </article>
-      <article class="reveal group bg-cream rounded-sm overflow-hidden flex flex-col">
-        <div class="overflow-hidden aspect-[4/3]">
-          <img src="11.jpeg" alt="Corredor del club en un sendero de piedra" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
-        </div>
-        <div class="p-7 flex flex-col flex-1">
-          <p class="eyebrow text-stone">2-3 mayo 2026</p>
-          <h3 class="font-display text-3xl mt-2 leading-tight">Trail Largo Pajarero</h3>
-          <p class="font-mono text-sm text-graphite mt-4 flex gap-4"><span>23 km</span><span class="text-sand2">|</span><span>+1.350 m</span></p>
-          <a href="#contacto" data-contacto="Inscripción a una carrera" class="mt-8 inline-flex items-center justify-between border-t border-sand2 pt-4 font-medium text-army group-hover:text-apricot transition-colors">Inscribirse <span class="material-symbols-outlined">arrow_forward</span></a>
-        </div>
-      </article>
-      <article class="reveal group bg-cream rounded-sm overflow-hidden flex flex-col">
-        <div class="overflow-hidden aspect-[4/3]">
-          <img src="3.jpeg" alt="Senderista por un camino de tierra entre campos" class="w-full h-full object-cover object-[50%_32%] group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
-        </div>
-        <div class="p-7 flex flex-col flex-1">
-          <p class="eyebrow text-stone">2-3 mayo 2026</p>
-          <h3 class="font-display text-3xl mt-2 leading-tight">Marcha Senderista</h3>
-          <p class="font-mono text-sm text-graphite mt-4 flex gap-4"><span>9 km</span><span class="text-sand2">|</span><span>+350 m</span></p>
-          <a href="#contacto" data-contacto="Inscripción a una carrera" class="mt-8 inline-flex items-center justify-between border-t border-sand2 pt-4 font-medium text-army group-hover:text-apricot transition-colors">Inscribirse <span class="material-symbols-outlined">arrow_forward</span></a>
-        </div>
-      </article>
+    <div class="reveal">
+      <img src="6.jpeg" alt="Socios del club en una terraza del pueblo" class="w-full aspect-[4/3] object-cover rounded-sm" loading="lazy"/>
     </div>
   </div>
 </section>
 
 <!-- Galería -->
-<section id="galeria" class="py-24 md:py-32 scroll-mt-16">
+<section id="galeria" class="py-24 md:py-28 scroll-mt-16">
   <div class="max-w-6xl mx-auto px-5 md:px-8">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 reveal">
-      <div>
-        <p class="eyebrow text-army mb-4">03 — Galería</p>
-        <h2 class="font-display text-4xl md:text-5xl leading-[1.05]">Así se vive <em class="text-apricot">la bandada</em></h2>
-      </div>
-      <a href="https://cdmpajarero.imgbb.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-medium text-army border-b border-apricot pb-1 hover:text-apricot w-fit transition-colors">Ver todas las fotos <span class="material-symbols-outlined text-xl">arrow_outward</span></a>
+      <h2 class="font-display italic font-medium uppercase text-3xl md:text-4xl text-army"><span class="titulo-linea">Así se vive la bandada</span></h2>
+      <a href="https://cdmpajarero.imgbb.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-semibold text-army border-b border-apricot pb-1 hover:text-apricot w-fit transition-colors">Ver todas las fotos <span class="material-symbols-outlined text-xl">arrow_outward</span></a>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 reveal">
-      <img src="12.jpeg" alt="Socios del club con dorsal en una carrera urbana" class="col-span-2 row-span-2 w-full h-full min-h-[260px] object-cover rounded-sm" loading="lazy"/>
-      <img src="1.jpeg" alt="Selfie de dos corredores del club con la equipación" class="w-full aspect-square object-cover rounded-sm" loading="lazy"/>
+      <img src="8.jpeg" alt="Socios del club con la bandera Pajarero" class="col-span-2 row-span-2 w-full h-full min-h-[260px] object-cover rounded-sm" loading="lazy"/>
+      <img src="1.jpeg" alt="Selfie de dos corredores del club" class="w-full aspect-square object-cover rounded-sm" loading="lazy"/>
       <img src="2.jpeg" alt="Foto de grupo del club en la meta" class="w-full aspect-square object-cover rounded-sm" loading="lazy"/>
       <img src="4.jpeg" alt="Socios con una pancarta" class="w-full aspect-square object-cover rounded-sm" loading="lazy"/>
-      <img src="5.jpeg" alt="Podio con un socio campeón y la bandera del club" class="w-full aspect-square object-cover rounded-sm" loading="lazy"/>
+      <img src="5.jpeg" alt="Podio con la bandera del club" class="w-full aspect-square object-cover rounded-sm" loading="lazy"/>
     </div>
   </div>
 </section>
 
 <!-- Contacto -->
-<section id="contacto" class="py-24 md:py-32 bg-sand scroll-mt-16">
+<section id="contacto" class="py-24 md:py-28 bg-sand scroll-mt-16">
   <div class="max-w-6xl mx-auto px-5 md:px-8 grid md:grid-cols-12 gap-12 md:gap-20 items-start">
     <div class="md:col-span-5 reveal">
-      <p class="eyebrow text-army mb-4">04 — Contacto</p>
-      <h2 class="font-display text-4xl md:text-5xl leading-[1.05]">Habla con <em class="text-apricot">la bandada</em></h2>
-      <p class="mt-6 text-graphite leading-relaxed">Elige el motivo, cuéntanos en una línea y listo. Te respondemos lo antes posible.</p>
+      <h2 class="font-display italic font-medium uppercase text-3xl md:text-4xl text-army"><span class="titulo-linea">Contacto</span></h2>
+      <p class="mt-8 text-graphite leading-relaxed">Elige el motivo, cuéntanos en una línea y listo. Te respondemos lo antes posible.</p>
       <ul class="mt-10 border-t border-sand2 text-graphite">
         <li><a href="mailto:info@cdmpajarero.com" class="flex items-center gap-4 py-4 border-b border-sand2 hover:text-army transition-colors"><span class="material-symbols-outlined text-army">mail</span>info@cdmpajarero.com</a></li>
         <li><button type="button" id="copiar-email" class="w-full flex items-center gap-4 py-4 border-b border-sand2 hover:text-army transition-colors text-left"><span class="material-symbols-outlined text-army">content_copy</span><span id="copiar-texto">Copiar email</span></button></li>
@@ -261,34 +248,22 @@ tailwind.config = {
 </section>
 
 <!-- Pie -->
-<footer class="bg-cream border-t border-sand2/70">
-  <div class="max-w-6xl mx-auto px-5 md:px-8 py-14 grid md:grid-cols-12 gap-10">
-    <div class="md:col-span-6 flex items-center gap-4">
-      <img src="logo.png" alt="Escudo del Club de Montaña Pajarero" class="h-20 w-20 object-contain mix-blend-multiply"/>
-      <div>
-        <p class="font-display text-2xl leading-tight">Club de Montaña Pajarero</p>
-        <p class="text-graphite mt-1 text-sm">Trail running y senderismo en Santa Cruz del Valle (Ávila).</p>
-      </div>
+<footer class="bg-night text-cream">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 py-14 grid md:grid-cols-3 gap-10 items-center text-center md:text-left">
+    <address class="not-italic eyebrow text-cream/70 leading-loose">
+      Santa Cruz del Valle, Ávila<br/>
+      <a href="mailto:info@cdmpajarero.com" class="hover:text-apricotsoft">info@cdmpajarero.com</a>
+    </address>
+    <div class="flex justify-center">
+      <img src="logo.png" alt="Escudo del Club de Montaña Pajarero" class="h-28 w-28 object-contain bg-cream rounded-full p-3"/>
     </div>
-    <nav class="md:col-span-3" aria-label="Pie">
-      <p class="eyebrow text-stone mb-4">Navegar</p>
-      <ul class="space-y-2 text-graphite text-sm">
-        <li><a href="#club" class="hover:text-army">El club</a></li>
-        <li><a href="#carreras" class="hover:text-army">Carreras</a></li>
-        <li><a href="#galeria" class="hover:text-army">Galería</a></li>
-        <li><a href="#contacto" data-contacto="" class="hover:text-army">Contacto</a></li>
-      </ul>
-    </nav>
-    <div class="md:col-span-3">
-      <p class="eyebrow text-stone mb-4">Contacto</p>
-      <address class="not-italic text-graphite text-sm space-y-2">
-        <p>Santa Cruz del Valle, Ávila</p>
-        <p><a href="mailto:info@cdmpajarero.com" class="hover:text-army">info@cdmpajarero.com</a></p>
-      </address>
+    <div class="flex justify-center md:justify-end gap-6 text-cream/80">
+      <a href="mailto:info@cdmpajarero.com" aria-label="Escribir un email" class="hover:text-apricotsoft"><span class="material-symbols-outlined text-3xl">mail</span></a>
+      <a href="https://cdmpajarero.imgbb.com" target="_blank" rel="noopener noreferrer" aria-label="Galería de fotos" class="hover:text-apricotsoft"><span class="material-symbols-outlined text-3xl">photo_camera</span></a>
     </div>
   </div>
-  <div class="border-t border-sand2/70">
-    <p class="max-w-6xl mx-auto px-5 md:px-8 py-5 eyebrow text-stone">© 2026 Club de Montaña Pajarero</p>
+  <div class="bg-black/25">
+    <p class="max-w-6xl mx-auto px-5 md:px-8 py-5 text-center text-sm text-cream/70">Copyright © 2026 Club de Montaña Pajarero</p>
   </div>
 </footer>
 
@@ -296,14 +271,7 @@ tailwind.config = {
 (function () {
   var EMAIL = 'info@cdmpajarero.com';
 
-  // Navegación: línea fina al bajar; menú móvil
-  var nav = document.getElementById('nav');
-  function onScroll() {
-    var s = window.scrollY > 10;
-    nav.classList.toggle('border-sand2/70', s);
-    nav.classList.toggle('border-transparent', !s);
-  }
-  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+  // Menú móvil
   var btn = document.getElementById('menu-btn'), menu = document.getElementById('menu-movil');
   function setMenu(open) {
     menu.classList.toggle('hidden', !open);
@@ -312,6 +280,42 @@ tailwind.config = {
   }
   btn.addEventListener('click', function () { setMenu(menu.classList.contains('hidden')); });
   menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+
+  // Carrusel de pruebas (anterior · actual · siguiente)
+  var slides = [
+    { img: '10.jpeg', pos: '50% 20%', alt: 'Corredor del club en un tramo técnico de roca', titulo: 'Trail rápido', fecha: '2-3 mayo 2026', datos: '11 km  ·  +650 m' },
+    { img: '11.jpeg', pos: '50% 25%', alt: 'Corredor del club en un sendero de piedra', titulo: 'Trail largo', fecha: '2-3 mayo 2026', datos: '23 km  ·  +1.350 m' },
+    { img: '3.jpeg', pos: '50% 32%', alt: 'Senderista por un camino de tierra entre campos', titulo: 'Marcha senderista', fecha: '2-3 mayo 2026', datos: '9 km  ·  +350 m' }
+  ];
+  var cur = 0, timer = null;
+  var iAct = document.getElementById('img-act'), iPrev = document.getElementById('img-prev'), iNext = document.getElementById('img-next');
+  var tAct = document.getElementById('txt-act');
+  var puntos = document.getElementById('puntos');
+  slides.forEach(function () { var d = document.createElement('span'); d.className = 'h-1.5 w-6 bg-sand2 transition-colors'; puntos.appendChild(d); });
+  function paint(i) {
+    var n = slides.length, s = slides[i], p = slides[(i + n - 1) % n], x = slides[(i + 1) % n];
+    iAct.src = s.img; iAct.alt = s.alt; iAct.style.objectPosition = s.pos;
+    iPrev.src = p.img; iPrev.style.objectPosition = p.pos;
+    iNext.src = x.img; iNext.style.objectPosition = x.pos;
+    document.getElementById('ev-fecha').textContent = s.fecha;
+    document.getElementById('ev-titulo').textContent = s.titulo;
+    document.getElementById('ev-datos').textContent = s.datos;
+    Array.prototype.forEach.call(puntos.children, function (d, k) { d.className = 'h-1.5 w-6 transition-colors ' + (k === i ? 'bg-apricot' : 'bg-sand2'); });
+  }
+  function go(i) {
+    cur = (i + slides.length) % slides.length;
+    iAct.classList.add('out'); tAct.classList.add('out');
+    setTimeout(function () { paint(cur); iAct.classList.remove('out'); tAct.classList.remove('out'); }, 300);
+  }
+  function auto() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    clearInterval(timer); timer = setInterval(function () { go(cur + 1); }, 7000);
+  }
+  ['ev-prev', 'ev-prev2'].forEach(function (id) { document.getElementById(id).addEventListener('click', function () { go(cur - 1); auto(); }); });
+  ['ev-next', 'ev-next2'].forEach(function (id) { document.getElementById(id).addEventListener('click', function () { go(cur + 1); auto(); }); });
+  document.getElementById('inicio').addEventListener('mouseenter', function () { clearInterval(timer); });
+  document.getElementById('inicio').addEventListener('mouseleave', auto);
+  paint(0); auto();
 
   // Aparición suave al hacer scroll
   var items = document.querySelectorAll('.reveal');
