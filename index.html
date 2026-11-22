@@ -104,9 +104,9 @@
 <a class="font-headline uppercase tracking-tighter text-sky-400 dark:text-sky-400 border-b-2 border-yellow-400 pb-1" href="#">Info del Club</a>
 <a class="font-headline uppercase tracking-tighter text-zinc-400 dark:text-zinc-500 hover:text-white transition-colors" href="https://cdmpajarero.imgbb.com" rel="noopener noreferrer" target="_blank">Fotos</a>
 <a class="font-headline uppercase tracking-tighter text-zinc-400 dark:text-zinc-500 hover:text-white transition-colors" href="#">Carreras</a>
-<a class="font-headline uppercase tracking-tighter text-zinc-400 dark:text-zinc-500 hover:text-white transition-colors" href="#">Contacto</a>
+<a class="font-headline uppercase tracking-tighter text-zinc-400 dark:text-zinc-500 hover:text-white transition-colors" href="#contacto" data-contacto="">Contacto</a>
 </div>
-<button class="bg-secondary text-on-secondary px-6 py-2 rounded-md font-headline font-bold uppercase tracking-widest text-sm hover:translate-y-[-4px] transition-all duration-300 shadow-lg shadow-secondary/10 active:scale-95">
+<button data-contacto="Quiero unirme al club" class="bg-secondary text-on-secondary px-6 py-2 rounded-md font-headline font-bold uppercase tracking-widest text-sm hover:translate-y-[-4px] transition-all duration-300 shadow-lg shadow-secondary/10 active:scale-95">
                 Únete al Club
             </button>
 </div>
@@ -127,7 +127,7 @@
                     Un colectivo técnico para atletas de montaña en el corazón de la sierra. Dominamos los senderos y conquistamos las cumbres. Únete a la bandada.
                 </p>
 <div class="flex flex-wrap gap-4">
-<button class="kinetic-gradient text-on-primary-container font-headline font-bold px-8 py-4 uppercase tracking-wider rounded-md flex items-center gap-3 group">
+<button data-contacto="Inscripción a una carrera" class="kinetic-gradient text-on-primary-container font-headline font-bold px-8 py-4 uppercase tracking-wider rounded-md flex items-center gap-3 group">
                         Inscríbete para mayo de 2026
                         <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
 </button>
@@ -259,7 +259,7 @@
 <span class="bg-primary text-on-primary-container px-3 py-1 font-headline font-bold text-xs uppercase tracking-widest mb-4 inline-block">2-3 MAYO 2026</span>
 <h3 class="font-headline font-black italic text-3xl uppercase tracking-tight mb-2">Trail Rápido <br/>PAJARERO</h3>
 <p class="text-on-surface-variant font-bold text-lg mb-6">11K | 650D+</p>
-<button class="w-full py-4 border border-primary/30 font-headline font-bold uppercase tracking-widest text-sm group-hover:bg-primary group-hover:text-on-primary-container transition-colors">Inscribirse</button>
+<button data-contacto="Inscripción a una carrera" class="w-full py-4 border border-primary/30 font-headline font-bold uppercase tracking-widest text-sm group-hover:bg-primary group-hover:text-on-primary-container transition-colors">Inscribirse</button>
 </div>
 </div>
 <!-- Tarjeta de evento 2 -->
@@ -271,7 +271,7 @@
 <span class="bg-secondary text-on-secondary px-3 py-1 font-headline font-bold text-xs uppercase tracking-widest mb-4 inline-block">2-3 MAYO 2026</span>
 <h3 class="font-headline font-black italic text-3xl uppercase tracking-tight mb-2">Trail Largo <br/>PAJARERO</h3>
 <p class="text-on-surface-variant font-bold text-lg mb-6">23K | 1350D+</p>
-<button class="w-full py-4 border border-secondary/30 font-headline font-bold uppercase tracking-widest text-sm group-hover:bg-secondary group-hover:text-on-secondary transition-colors">Inscribirse</button>
+<button data-contacto="Inscripción a una carrera" class="w-full py-4 border border-secondary/30 font-headline font-bold uppercase tracking-widest text-sm group-hover:bg-secondary group-hover:text-on-secondary transition-colors">Inscribirse</button>
 </div>
 </div>
 <!-- Tarjeta de evento 3 -->
@@ -283,12 +283,98 @@
 <span class="bg-on-surface-variant text-surface px-3 py-1 font-headline font-bold text-xs uppercase tracking-widest mb-4 inline-block">2-3 MAYO 2026</span>
 <h3 class="font-headline font-black italic text-3xl uppercase tracking-tight mb-2">Marcha <br/>Senderista</h3>
 <p class="text-on-surface-variant font-bold text-lg mb-6">9KM | 350D+</p>
-<button class="w-full py-4 border border-outline-variant/30 font-headline font-bold uppercase tracking-widest text-sm group-hover:bg-white group-hover:text-black transition-colors">Inscribirse</button>
+<button data-contacto="Inscripción a una carrera" class="w-full py-4 border border-outline-variant/30 font-headline font-bold uppercase tracking-widest text-sm group-hover:bg-white group-hover:text-black transition-colors">Inscribirse</button>
 </div>
 </div>
 </div>
 </div>
 </section>
+<!-- Contacto -->
+<section id="contacto" class="py-32 bg-surface relative scroll-mt-16">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-16 items-start">
+<div class="md:col-span-5 space-y-8">
+<div class="space-y-4">
+<span class="text-secondary font-headline font-bold uppercase tracking-[0.3em] text-xs">Habla con la bandada</span>
+<h2 class="font-headline font-black italic text-5xl uppercase tracking-tighter">Con<span class="text-primary">tacto</span></h2>
+<div class="w-24 h-2 bg-secondary"></div>
+</div>
+<p class="text-lg text-on-surface-variant font-light leading-relaxed">Elige el motivo, cuéntanos en una línea y listo. Te respondemos lo antes posible.</p>
+<div class="space-y-3">
+<a href="mailto:info@cdmpajarero.com" class="flex items-center gap-4 bg-surface-container-low hover:bg-surface-container p-4 transition-colors">
+<span class="material-symbols-outlined text-secondary">mail</span>
+<span class="text-sm tracking-wide">info@cdmpajarero.com</span>
+</a>
+<button type="button" id="copiar-email" class="w-full flex items-center gap-4 bg-surface-container-low hover:bg-surface-container p-4 transition-colors text-left">
+<span class="material-symbols-outlined text-secondary">content_copy</span>
+<span class="text-sm tracking-wide" id="copiar-texto">Copiar email</span>
+</button>
+<div class="flex items-center gap-4 bg-surface-container-low p-4">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<span class="text-sm tracking-wide">Santa Cruz del Valle, Ávila</span>
+</div>
+</div>
+</div>
+<form id="form-contacto" class="md:col-span-7 bg-surface-container-low p-8 md:p-10 space-y-6 shadow-2xl shadow-sky-900/10" novalidate>
+<fieldset>
+<legend class="font-headline font-bold uppercase tracking-widest text-xs text-on-surface-variant mb-3">¿Qué necesitas?</legend>
+<div class="flex flex-wrap gap-2" id="temas">
+<label class="cursor-pointer"><input type="radio" name="tema" value="Quiero unirme al club" class="peer sr-only" checked/><span class="block px-4 py-2 bg-surface-container-highest text-sm font-headline uppercase tracking-wider peer-checked:bg-secondary peer-checked:text-on-secondary peer-focus-visible:ring-2 ring-primary transition-colors">Unirme al club</span></label>
+<label class="cursor-pointer"><input type="radio" name="tema" value="Inscripción a una carrera" class="peer sr-only"/><span class="block px-4 py-2 bg-surface-container-highest text-sm font-headline uppercase tracking-wider peer-checked:bg-secondary peer-checked:text-on-secondary peer-focus-visible:ring-2 ring-primary transition-colors">Inscripción carrera</span></label>
+<label class="cursor-pointer"><input type="radio" name="tema" value="Otra consulta" class="peer sr-only"/><span class="block px-4 py-2 bg-surface-container-highest text-sm font-headline uppercase tracking-wider peer-checked:bg-secondary peer-checked:text-on-secondary peer-focus-visible:ring-2 ring-primary transition-colors">Otra consulta</span></label>
+</div>
+</fieldset>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<label class="block"><span class="block font-headline font-bold uppercase tracking-widest text-xs text-on-surface-variant mb-2">Nombre</span>
+<input id="c-nombre" name="nombre" type="text" autocomplete="name" required placeholder="Tu nombre" class="w-full bg-surface-container-highest border-0 border-b-2 border-transparent focus:border-secondary focus:ring-0 text-on-surface placeholder:text-on-surface-variant/50 px-4 py-3"/></label>
+<label class="block"><span class="block font-headline font-bold uppercase tracking-widest text-xs text-on-surface-variant mb-2">Email</span>
+<input id="c-email" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="tu@email.com" class="w-full bg-surface-container-highest border-0 border-b-2 border-transparent focus:border-secondary focus:ring-0 text-on-surface placeholder:text-on-surface-variant/50 px-4 py-3"/></label>
+</div>
+<label class="block"><span class="block font-headline font-bold uppercase tracking-widest text-xs text-on-surface-variant mb-2">Mensaje <span class="normal-case tracking-normal font-normal">(opcional)</span></span>
+<textarea id="c-mensaje" name="mensaje" rows="4" placeholder="Cuéntanos tu nivel, tus dudas…" class="w-full bg-surface-container-highest border-0 border-b-2 border-transparent focus:border-secondary focus:ring-0 text-on-surface placeholder:text-on-surface-variant/50 px-4 py-3 resize-y"></textarea></label>
+<p id="c-error" class="hidden text-error text-sm" role="alert"></p>
+<button type="submit" class="w-full bg-secondary text-on-secondary px-8 py-4 rounded-md font-headline font-bold uppercase tracking-widest hover:translate-y-[-4px] transition-all duration-300 shadow-lg shadow-secondary/10 active:scale-95 flex items-center justify-center gap-3">Enviar mensaje <span class="material-symbols-outlined">send</span></button>
+<p class="text-xs text-on-surface-variant/70">Se abrirá tu correo con el mensaje ya redactado; solo tienes que pulsar enviar.</p>
+</form>
+</div>
+</section>
+<script>
+(function () {
+  var EMAIL = 'info@cdmpajarero.com';
+  var form = document.getElementById('form-contacto');
+  var err = document.getElementById('c-error');
+  function irAContacto(tema) {
+    if (tema) {
+      var r = form.querySelector('input[name="tema"][value="' + tema + '"]');
+      if (r) r.checked = true;
+    }
+    document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(function () { document.getElementById('c-nombre').focus({ preventScroll: true }); }, 600);
+  }
+  // Botones de la web que llevan directo al formulario con el motivo ya elegido
+  document.querySelectorAll('[data-contacto]').forEach(function (el) {
+    el.addEventListener('click', function (e) { e.preventDefault(); irAContacto(el.dataset.contacto); });
+  });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var nombre = form.nombre.value.trim(), email = form.email.value.trim();
+    if (!nombre || !/^\S+@\S+\.\S+$/.test(email)) {
+      err.textContent = !nombre ? 'Falta tu nombre.' : 'Revisa tu email.';
+      err.classList.remove('hidden');
+      (!nombre ? form.nombre : form.email).focus();
+      return;
+    }
+    err.classList.add('hidden');
+    var tema = form.tema.value;
+    var cuerpo = 'Hola, soy ' + nombre + ' (' + email + ').\n\n' + (form.mensaje.value.trim() || tema) + '\n';
+    window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('[Web] ' + tema) + '&body=' + encodeURIComponent(cuerpo);
+  });
+  document.getElementById('copiar-email').addEventListener('click', function () {
+    var t = document.getElementById('copiar-texto');
+    (navigator.clipboard ? navigator.clipboard.writeText(EMAIL) : Promise.reject()).then(function () { t.textContent = '¡Copiado!'; }, function () { t.textContent = EMAIL; });
+    setTimeout(function () { t.textContent = 'Copiar email'; }, 2000);
+  });
+})();
+</script>
 <!-- Pie de página -->
 <footer class="bg-surface-container-lowest py-20 px-8 border-t border-white/5">
 <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -304,7 +390,7 @@
                 </p>
 <div class="flex gap-6">
 <a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-2xl">public</span></a>
-<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-2xl">mail</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#contacto" data-contacto=""><span class="material-symbols-outlined text-2xl">mail</span></a>
 <a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-2xl">share</span></a>
 </div>
 </div>
@@ -321,7 +407,7 @@
 <p class="text-on-surface-variant text-sm uppercase tracking-widest leading-loose">
                     Santa Cruz del Valle <br/>
                     Ávila, España <br/>
-                    info@cdmpajarero.es
+                    info@cdmpajarero.com
                 </p>
 </div>
 </div>
