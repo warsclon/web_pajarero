@@ -98,8 +98,45 @@ tailwind.config = {
   </div>
 </header>
 
+<!-- Presentación -->
+<section id="inicio" class="relative bg-night text-cream overflow-hidden">
+  <div class="absolute inset-0" aria-hidden="true">
+    <img id="hero-1" src="presentacion-pueblo.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-[50%_65%] transition-opacity duration-[1600ms]"/>
+    <img id="hero-2" src="presentacion-montana.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-[50%_55%] opacity-0 transition-opacity duration-[1600ms]"/>
+    <div class="absolute inset-0 bg-gradient-to-r from-night/85 via-night/55 to-night/10"></div>
+    <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-night/70 to-transparent"></div>
+  </div>
+  <div class="relative max-w-6xl mx-auto px-5 md:px-8 min-h-[70vh] md:min-h-[78vh] py-20 flex flex-col justify-center">
+    <p class="eyebrow text-apricotsoft mb-6 flex items-center gap-3"><span class="h-px w-8 bg-apricot"></span>Santa Cruz del Valle · Ávila · desde 2023</p>
+    <h1 class="font-display font-medium text-5xl sm:text-6xl lg:text-7xl leading-[1.02] max-w-3xl">
+      Montaña, trail y <em class="text-apricotsoft">buena compañía</em>.
+    </h1>
+    <p class="mt-7 text-lg md:text-xl text-cream/85 max-w-xl leading-relaxed">
+      Somos el Club de Montaña Pajarero: corremos, caminamos y organizamos pruebas en la sierra de Ávila. Ven a probar un día y únete a la bandada.
+    </p>
+    <div class="mt-10 flex flex-wrap gap-3">
+      <a href="#contacto" data-contacto="Quiero unirme al club" class="group inline-flex items-center gap-3 bg-cream text-army2 font-semibold px-7 py-3.5 rounded-md hover:bg-apricotsoft transition-colors">
+        Únete al club
+        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+      </a>
+      <a href="#trail-pajarero" class="inline-flex items-center px-7 py-3.5 rounded-md border border-cream/50 font-semibold hover:bg-cream hover:text-army2 transition-colors">Trail Pajarero 2026</a>
+    </div>
+  </div>
+  <div class="relative border-t border-cream/20 bg-night/60 backdrop-blur-sm">
+    <dl class="max-w-6xl mx-auto px-5 md:px-8 grid grid-cols-3 divide-x divide-cream/20 text-center md:text-left">
+      <div class="py-5 md:px-6 md:first:pl-0"><dt class="eyebrow text-cream/60">Socios y socias</dt><dd class="font-display text-3xl md:text-4xl mt-1">81</dd></div>
+      <div class="py-5 px-2 md:px-6"><dt class="eyebrow text-cream/60">Fundado en</dt><dd class="font-display text-3xl md:text-4xl mt-1">2023</dd></div>
+      <div class="py-5 px-2 md:px-6"><dt class="eyebrow text-cream/60">Próxima cita</dt><dd class="font-display text-3xl md:text-4xl mt-1">2-3 mayo</dd></div>
+    </dl>
+  </div>
+</section>
+
 <!-- Carrusel de pruebas: anterior · actual · siguiente -->
-<section id="inicio" aria-roledescription="carrusel" aria-label="Próximas pruebas">
+<section id="proximas" aria-roledescription="carrusel" aria-label="Próximas pruebas" class="scroll-mt-16">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 py-10 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+    <h2 class="font-display italic font-medium uppercase text-3xl md:text-4xl text-army"><span class="titulo-linea">Próximas pruebas</span></h2>
+    <p class="text-graphite">Trail Pajarero · 2 y 3 de mayo de 2026</p>
+  </div>
   <div class="grid md:grid-cols-[1fr_1.9fr_1fr] h-[74vh] min-h-[480px] max-h-[760px] bg-night">
     <button id="ev-prev" type="button" class="hidden md:block relative overflow-hidden group" aria-label="Prueba anterior">
       <img id="img-prev" src="" alt="" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity"/>
@@ -110,7 +147,7 @@ tailwind.config = {
       <div class="absolute inset-0 bg-gradient-to-t from-night/90 via-night/25 to-transparent"></div>
       <div id="txt-act" class="absolute inset-x-0 bottom-0 p-6 md:p-10 text-center text-cream fade-swap">
         <p id="ev-fecha" class="eyebrow text-apricotsoft"></p>
-        <h1 id="ev-titulo" class="font-display font-semibold uppercase text-4xl md:text-6xl leading-[0.98] mt-3"></h1>
+        <h3 id="ev-titulo" class="font-display font-semibold uppercase text-4xl md:text-6xl leading-[0.98] mt-3"></h3>
         <p id="ev-datos" class="font-mono text-sm mt-4 text-cream/85"></p>
         <a href="#contacto" data-contacto="Inscripción a una carrera" class="mt-7 inline-flex items-center gap-3 bg-cream text-army2 font-semibold px-6 py-3 rounded-md hover:bg-apricotsoft transition-colors">Inscribirse <span class="material-symbols-outlined">arrow_forward</span></a>
       </div>
@@ -135,6 +172,20 @@ tailwind.config = {
     <p class="md:col-span-7 md:pl-4 text-lg text-cream/85 leading-relaxed reveal">
       Somos un club de Santa Cruz del Valle (Ávila) con 81 socios y socias. Corremos, caminamos y organizamos pruebas en la sierra: trail running, senderismo y buena compañía, a cualquier nivel.
     </p>
+  </div>
+  <!-- Reconocimiento: la imagen se muestra cuando exista placa-medalla-honor.jpg en la carpeta -->
+  <div class="max-w-6xl mx-auto px-5 md:px-8 pb-16 md:pb-20">
+    <div class="border-t border-cream/20 pt-12 flex flex-col md:flex-row gap-10 md:gap-14 items-center reveal">
+      <figure class="md:w-5/12 shrink-0">
+        <img src="placa-medalla-honor.jpg" alt="Placa de cerámica: Medalla de Honor del Ayuntamiento de Santa Cruz del Valle al Club de Montaña Pajarero, 5 de septiembre de 2026" class="w-full rounded-sm shadow-[0_18px_40px_-18px_rgba(0,0,0,0.6)]" loading="lazy" onerror="this.closest('figure').hidden=true"/>
+      </figure>
+      <div>
+        <p class="eyebrow text-apricotsoft">Reconocimiento · 5 de septiembre de 2026</p>
+        <h3 class="font-display italic font-medium uppercase text-3xl md:text-4xl mt-3">Medalla de Honor</h3>
+        <p class="mt-5 text-cream/85 leading-relaxed">El Ayuntamiento de Santa Cruz del Valle nos concedió su Medalla de Honor en reconocimiento a nuestra trayectoria, nuestro compromiso con el deporte en la naturaleza y nuestra contribución al asociacionismo, al mantenimiento de senderos y a la vida social del municipio.</p>
+        <p class="mt-5 font-display italic text-xl text-apricotsoft">Caminando juntos, haciendo cumbre en el mañana.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -359,6 +410,13 @@ tailwind.config = {
   btn.addEventListener('click', function () { setMenu(menu.classList.contains('hidden')); });
   menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
 
+  // Portada: fundido entre las dos fotos
+  (function () {
+    var a = document.getElementById('hero-1'), b = document.getElementById('hero-2'), on = true;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    setInterval(function () { on = !on; a.style.opacity = on ? 1 : 0; b.style.opacity = on ? 0 : 1; }, 7000);
+  })();
+
   // Carrusel de pruebas (anterior · actual · siguiente)
   var slides = [
     { img: 'speed-trail.webp', pos: '50% 35%', alt: 'Corredor del Speed Trail Pajarero por un sendero entre pinos', titulo: 'Speed Trail Pajarero', fecha: '2-3 mayo 2026', datos: '11 km  ·  +650 m' },
@@ -392,8 +450,8 @@ tailwind.config = {
   }
   ['ev-prev', 'ev-prev2'].forEach(function (id) { document.getElementById(id).addEventListener('click', function () { go(cur - 1); auto(); }); });
   ['ev-next', 'ev-next2'].forEach(function (id) { document.getElementById(id).addEventListener('click', function () { go(cur + 1); auto(); }); });
-  document.getElementById('inicio').addEventListener('mouseenter', function () { clearInterval(timer); });
-  document.getElementById('inicio').addEventListener('mouseleave', auto);
+  document.getElementById('proximas').addEventListener('mouseenter', function () { clearInterval(timer); });
+  document.getElementById('proximas').addEventListener('mouseleave', auto);
   paint(0); auto();
 
   // Aparición suave al hacer scroll
