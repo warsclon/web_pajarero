@@ -62,7 +62,7 @@ tailwind.config = {
 <a href="#contacto" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] bg-army text-cream px-4 py-2 rounded">Ir al contacto</a>
 
 <!-- Cabecera: logo grande y menú debajo -->
-<header>
+<header class="contents">
   <div class="max-w-6xl mx-auto px-5 md:px-8 py-4 flex items-center justify-between">
     <a href="#inicio" class="flex items-center gap-4" aria-label="Club de Montaña Pajarero, inicio">
       <img src="logo.png" alt="Escudo del Club de Montaña Pajarero" class="h-20 md:h-24 w-auto object-contain mix-blend-multiply"/>
@@ -108,6 +108,7 @@ tailwind.config = {
     </button>
     <div class="relative overflow-hidden">
       <img id="img-act" src="" alt="" class="absolute inset-0 w-full h-full object-cover fade-swap"/>
+      <img id="img-act2" src="" alt="" class="hidden absolute top-0 right-0 h-full w-1/2 object-cover border-l-2 border-cream fade-swap"/>
       <div class="absolute inset-0 bg-gradient-to-t from-night/90 via-night/25 to-transparent"></div>
       <div id="txt-act" class="absolute inset-x-0 bottom-0 p-6 md:p-10 text-center text-cream fade-swap">
         <p id="ev-fecha" class="eyebrow text-apricotsoft"></p>
@@ -163,7 +164,7 @@ tailwind.config = {
         </div>
       </article>
       <article class="reveal bg-sand rounded-sm overflow-hidden flex flex-col">
-        <div class="overflow-hidden aspect-[4/3]"><img src="cross-trail.jpg" alt="Corredor del Cross Trail Pajarero por un sendero de bosque con helechos" class="w-full h-full object-cover object-[50%_38%]" loading="lazy"/></div>
+        <div class="overflow-hidden aspect-[4/3] grid grid-cols-2 gap-0.5 bg-cream"><img src="cross-trail.jpg" alt="Corredor del Cross Trail Pajarero por un sendero de bosque con helechos" class="w-full h-full object-cover object-[50%_38%]" loading="lazy"/><img src="cross-trail-2.jpg" alt="Corredora del Cross Trail Pajarero con su dorsal" class="w-full h-full object-cover object-[45%_30%]" loading="lazy"/></div>
         <div class="p-7">
           <p class="eyebrow text-stone">Carrera de trail</p>
           <h3 class="font-display text-3xl mt-2">Cross Trail Pajarero</h3>
@@ -385,17 +386,18 @@ tailwind.config = {
   // Carrusel de pruebas (anterior · actual · siguiente)
   var slides = [
     { img: '10.jpeg', pos: '50% 20%', alt: 'Corredor del club en un tramo técnico de roca', titulo: 'Speed Trail Pajarero', fecha: '2-3 mayo 2026', datos: '11 km  ·  +650 m' },
-    { img: 'cross-trail.jpg', pos: '50% 38%', alt: 'Corredor del Cross Trail Pajarero por un sendero de bosque con helechos', titulo: 'Cross Trail Pajarero', fecha: '2-3 mayo 2026', datos: '23 km  ·  +1.350 m' },
+    { img: 'cross-trail.jpg', pos: '50% 38%', alt: 'Corredor del Cross Trail Pajarero por un sendero de bosque con helechos', img2: 'cross-trail-2.jpg', pos2: '45% 30%', alt2: 'Corredora del Cross Trail Pajarero con su dorsal', titulo: 'Cross Trail Pajarero', fecha: '2-3 mayo 2026', datos: '23 km  ·  +1.350 m' },
     { img: '3.jpeg', pos: '50% 32%', alt: 'Senderista por un camino de tierra entre campos', titulo: 'Marcha senderista', fecha: '2-3 mayo 2026', datos: '9 km  ·  +350 m' }
   ];
   var cur = 0, timer = null;
-  var iAct = document.getElementById('img-act'), iPrev = document.getElementById('img-prev'), iNext = document.getElementById('img-next');
+  var iAct = document.getElementById('img-act'), iAct2 = document.getElementById('img-act2'), iPrev = document.getElementById('img-prev'), iNext = document.getElementById('img-next');
   var tAct = document.getElementById('txt-act');
   var puntos = document.getElementById('puntos');
   slides.forEach(function () { var d = document.createElement('span'); d.className = 'h-1.5 w-6 bg-sand2 transition-colors'; puntos.appendChild(d); });
   function paint(i) {
     var n = slides.length, s = slides[i], p = slides[(i + n - 1) % n], x = slides[(i + 1) % n];
     iAct.src = s.img; iAct.alt = s.alt; iAct.style.objectPosition = s.pos;
+    if (s.img2) { iAct.style.width = '50%'; iAct2.src = s.img2; iAct2.alt = s.alt2; iAct2.style.objectPosition = s.pos2; iAct2.classList.remove('hidden'); } else { iAct.style.width = '100%'; iAct2.classList.add('hidden'); }
     iPrev.src = p.img; iPrev.style.objectPosition = p.pos;
     iNext.src = x.img; iNext.style.objectPosition = x.pos;
     document.getElementById('ev-fecha').textContent = s.fecha;
@@ -405,8 +407,8 @@ tailwind.config = {
   }
   function go(i) {
     cur = (i + slides.length) % slides.length;
-    iAct.classList.add('out'); tAct.classList.add('out');
-    setTimeout(function () { paint(cur); iAct.classList.remove('out'); tAct.classList.remove('out'); }, 300);
+    iAct.classList.add('out'); iAct2.classList.add('out'); tAct.classList.add('out');
+    setTimeout(function () { paint(cur); iAct.classList.remove('out'); iAct2.classList.remove('out'); tAct.classList.remove('out'); }, 300);
   }
   function auto() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
