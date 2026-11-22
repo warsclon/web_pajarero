@@ -5,7 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Club de Montaña Pajarero | Santa Cruz del Valle (Ávila)</title>
 <meta name="description" content="Club de Montaña Pajarero: trail running y senderismo en Santa Cruz del Valle (Ávila). Conoce el club, las próximas pruebas y únete a la bandada."/>
-<meta name="theme-color" content="#F6F1E7"/>
+<meta name="theme-color" content="#FBF8F2"/>
 <meta property="og:title" content="Club de Montaña Pajarero"/>
 <meta property="og:description" content="Trail running y senderismo en Santa Cruz del Valle (Ávila). Únete a la bandada."/>
 <meta property="og:image" content="9.jpeg"/>
@@ -14,14 +14,14 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&amp;family=DM+Sans:wght@400;500;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script>
 tailwind.config = {
   theme: {
     extend: {
       colors: {
-        cream: "#F6F1E7",
+        cream: "#FBF8F2",
         sand: "#E9E0CD",
         sand2: "#D9CCB1",
         stone: "#8A8478",
@@ -35,19 +35,24 @@ tailwind.config = {
         apricotsoft: "#EDC3A0"
       },
       fontFamily: {
-        display: ["Fraunces", "Georgia", "serif"],
-        sans: ["DM Sans", "system-ui", "sans-serif"],
-        mono: ["DM Mono", "ui-monospace", "monospace"]
+        display: ["Manrope", "system-ui", "sans-serif"],
+        sans: ["Manrope", "system-ui", "sans-serif"],
+        mono: ["Manrope", "system-ui", "sans-serif"]
       }
     }
   }
 }
 </script>
 <style>
-  body { font-family: "DM Sans", system-ui, sans-serif; background: #F6F1E7; color: #26241F; -webkit-font-smoothing: antialiased; }
+  body { font-family: "Manrope", system-ui, sans-serif; background: #FBF8F2; color: #26241F; -webkit-font-smoothing: antialiased; line-height: 1.65; }
   .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-  .font-display { letter-spacing: -0.015em; }
-  .eyebrow { font-family: "DM Mono", monospace; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; }
+  .font-display { letter-spacing: -0.025em; font-weight: 700; }
+  .font-display.font-medium { font-weight: 600; }
+  .font-display.font-semibold { font-weight: 700; }
+  html .italic, html em, html h1, html h2, html h3 { font-style: normal; }
+  .font-display.italic.uppercase { text-transform: none; }
+  .font-mono { font-variant-numeric: tabular-nums; }
+  .eyebrow { font-family: "Manrope", sans-serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; }
   .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .js .reveal.in { opacity: 1; transform: none; }
   .fade-swap { transition: opacity .35s ease; }
@@ -169,7 +174,7 @@ tailwind.config = {
   <div class="max-w-6xl mx-auto px-5 md:px-8 pb-16 md:pb-20">
     <div class="border-t border-cream/20 pt-12 flex flex-col md:flex-row gap-10 md:gap-14 items-center reveal">
       <figure class="md:w-5/12 shrink-0">
-        <img src="placa-medalla-honor.jpg" alt="Placa de cerámica: Medalla de Honor del Ayuntamiento de Santa Cruz del Valle al Club de Montaña Pajarero, 5 de septiembre de 2026" class="w-full rounded-sm shadow-[0_18px_40px_-18px_rgba(0,0,0,0.6)]" loading="lazy" onerror="this.closest('figure').hidden=true"/>
+        <img src="placa-medalla-honor.jpg" alt="Placa de cerámica: Medalla de Honor del Ayuntamiento de Santa Cruz del Valle al Club de Montaña Pajarero, 5 de septiembre de 2026" class="w-full rounded-2xl shadow-[0_18px_40px_-18px_rgba(0,0,0,0.6)]" loading="lazy" onerror="this.closest('figure').hidden=true"/>
       </figure>
       <div>
         <p class="eyebrow text-apricotsoft">Reconocimiento · 5 de septiembre de 2026</p>
@@ -193,7 +198,7 @@ tailwind.config = {
     </div>
 
     <div class="mt-14 grid md:grid-cols-3 gap-6">
-      <article class="reveal bg-sand rounded-sm overflow-hidden flex flex-col">
+      <article class="reveal bg-sand rounded-2xl overflow-hidden flex flex-col">
         <div class="overflow-hidden aspect-[4/3]"><img src="speed-trail.webp" alt="Corredor del Speed Trail Pajarero por un sendero entre pinos" class="w-full h-full object-cover object-[50%_35%]" loading="lazy"/></div>
         <div class="p-7">
           <p class="eyebrow text-stone">Carrera de trail</p>
@@ -204,7 +209,7 @@ tailwind.config = {
           </dl>
         </div>
       </article>
-      <article class="reveal bg-sand rounded-sm overflow-hidden flex flex-col">
+      <article class="reveal bg-sand rounded-2xl overflow-hidden flex flex-col">
         <div class="overflow-hidden aspect-[4/3] grid grid-cols-2 gap-0.5 bg-cream"><img src="cross-trail.jpg" alt="Corredor del Cross Trail Pajarero por un sendero de bosque con helechos" class="w-full h-full object-cover object-[50%_38%]" loading="lazy"/><img src="cross-trail-2.jpg" alt="Corredora del Cross Trail Pajarero con su dorsal" class="w-full h-full object-cover object-[45%_30%]" loading="lazy"/></div>
         <div class="p-7">
           <p class="eyebrow text-stone">Carrera de trail</p>
@@ -215,7 +220,7 @@ tailwind.config = {
           </dl>
         </div>
       </article>
-      <article class="reveal bg-sand rounded-sm overflow-hidden flex flex-col">
+      <article class="reveal bg-sand rounded-2xl overflow-hidden flex flex-col">
         <div class="overflow-hidden aspect-[4/3]"><img src="marcha-senderista.jpg" alt="Participantes de la marcha con las banderas del club bajo el arco de salida" class="w-full h-full object-cover object-[50%_45%]" loading="lazy"/></div>
         <div class="p-7">
           <p class="eyebrow text-stone">Marcha</p>
@@ -238,7 +243,7 @@ tailwind.config = {
         <div class="grid grid-cols-3 gap-4 py-4 border-b border-sand2"><dt class="eyebrow text-stone pt-1">Precio</dt><dd class="col-span-2 text-stone">Próximamente</dd></div>
         <div class="grid grid-cols-3 gap-4 py-4 border-b border-sand2"><dt class="eyebrow text-stone pt-1">Reglamento</dt><dd class="col-span-2 text-stone">Próximamente</dd></div>
       </dl>
-      <div class="md:col-span-5 reveal bg-army2 text-cream rounded-sm p-8">
+      <div class="md:col-span-5 reveal bg-army2 text-cream rounded-2xl p-8">
         <h3 class="font-display italic font-medium uppercase text-2xl text-apricotsoft">Inscríbete</h3>
         <p class="mt-4 text-cream/85 leading-relaxed">Elige tu distancia y reserva tu plaza. Publicaremos horarios, recorridos y precios en cuanto estén cerrados.</p>
         <a id="inscripcion-trail" href="#contacto" data-contacto="Inscripción a una carrera" class="mt-7 inline-flex items-center gap-2 bg-cream text-army2 px-7 py-3 rounded-md text-sm font-semibold uppercase tracking-[0.12em] hover:bg-apricotsoft transition-colors">Inscribirme <span class="material-symbols-outlined text-xl">arrow_forward</span></a>
@@ -255,25 +260,25 @@ tailwind.config = {
       <p class="mt-8 text-graphite leading-relaxed">Además del Trail Pajarero, durante todo el año salimos a la montaña y participamos en otras pruebas. Para todos los niveles y siempre en compañía.</p>
     </div>
     <div class="mt-12 grid sm:grid-cols-2 gap-6">
-      <article class="reveal bg-cream rounded-sm p-8 flex flex-col">
+      <article class="reveal bg-cream rounded-2xl p-8 flex flex-col">
         <span class="material-symbols-outlined text-army text-4xl">hiking</span>
         <p class="eyebrow text-stone mt-5">Salida</p>
         <h3 class="font-display italic font-medium uppercase text-2xl text-apricot mt-1">Salidas senderistas</h3>
         <p class="text-graphite mt-3 leading-relaxed">Rutas a pie para todos los niveles, a buen ritmo y en buena compañía.</p>
       </article>
-      <article class="reveal bg-cream rounded-sm p-8 flex flex-col">
+      <article class="reveal bg-cream rounded-2xl p-8 flex flex-col">
         <span class="material-symbols-outlined text-army text-4xl">landscape</span>
         <p class="eyebrow text-stone mt-5">Salida</p>
         <h3 class="font-display italic font-medium uppercase text-2xl text-apricot mt-1">Salidas montañeras</h3>
         <p class="text-graphite mt-3 leading-relaxed">Jornadas de montaña por la sierra, con más desnivel y más cumbre.</p>
       </article>
-      <article class="reveal bg-cream rounded-sm p-8 flex flex-col">
+      <article class="reveal bg-cream rounded-2xl p-8 flex flex-col">
         <span class="material-symbols-outlined text-army text-4xl">dark_mode</span>
         <p class="eyebrow text-stone mt-5">Salida</p>
         <h3 class="font-display italic font-medium uppercase text-2xl text-apricot mt-1">Salidas nocturnas</h3>
         <p class="text-graphite mt-3 leading-relaxed">Salidas para vivir la montaña de noche, en grupo.</p>
       </article>
-      <article class="reveal bg-cream rounded-sm p-8 flex flex-col">
+      <article class="reveal bg-cream rounded-2xl p-8 flex flex-col">
         <span class="material-symbols-outlined text-army text-4xl">directions_run</span>
         <p class="eyebrow text-stone mt-5">Prueba</p>
         <h3 class="font-display italic font-medium uppercase text-2xl text-apricot mt-1">San Silvestre Pajarera</h3>
@@ -325,7 +330,7 @@ tailwind.config = {
       <a href="#contacto" data-contacto="Otra consulta" class="mt-8 inline-flex items-center gap-2 border border-cream/40 px-7 py-3 rounded-md text-sm font-semibold uppercase tracking-[0.12em] hover:bg-cream hover:text-night transition-colors">Saber más <span class="material-symbols-outlined text-xl">arrow_forward</span></a>
     </div>
     <div class="reveal">
-      <img src="santa-cruz-del-valle.jpg" alt="Vista nevada de Santa Cruz del Valle con la sierra al fondo" class="w-full aspect-[4/3] object-cover object-[62%_70%] rounded-sm" loading="lazy"/>
+      <img src="santa-cruz-del-valle.jpg" alt="Vista nevada de Santa Cruz del Valle con la sierra al fondo" class="w-full aspect-[4/3] object-cover object-[62%_70%] rounded-2xl" loading="lazy"/>
     </div>
   </div>
 </section>
@@ -343,7 +348,7 @@ tailwind.config = {
         <li class="flex items-center gap-4 py-4 border-b border-sand2"><span class="material-symbols-outlined text-army">location_on</span>Santa Cruz del Valle, Ávila</li>
       </ul>
     </div>
-    <form id="form-contacto" class="md:col-span-7 bg-cream rounded-sm p-7 md:p-10 space-y-7 reveal" novalidate>
+    <form id="form-contacto" class="md:col-span-7 bg-cream rounded-2xl p-7 md:p-10 space-y-7 reveal" novalidate>
       <fieldset>
         <legend class="eyebrow text-stone mb-3">¿Qué necesitas?</legend>
         <div class="flex flex-wrap gap-2" id="temas">
