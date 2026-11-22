@@ -76,6 +76,7 @@ tailwind.config = {
         <a href="#inicio" class="text-army">Inicio</a>
         <a href="#pruebas" class="hover:text-army transition-colors">Pruebas</a>
         <a href="#club" class="hover:text-army transition-colors">El club</a>
+        <a href="#federarse" class="hover:text-army transition-colors">Federarte</a>
         <a href="#pueblo" class="hover:text-army transition-colors">El pueblo</a>
         <a href="#galeria" class="hover:text-army transition-colors">Galería</a>
         <a href="#contacto" data-contacto="" class="hover:text-army transition-colors">Contacto</a>
@@ -89,6 +90,7 @@ tailwind.config = {
       <a href="#inicio" class="block py-3 font-display text-2xl">Inicio</a>
       <a href="#pruebas" class="block py-3 font-display text-2xl">Pruebas</a>
       <a href="#club" class="block py-3 font-display text-2xl">El club</a>
+      <a href="#federarse" class="block py-3 font-display text-2xl">Federarte</a>
       <a href="#pueblo" class="block py-3 font-display text-2xl">El pueblo</a>
       <a href="#galeria" class="block py-3 font-display text-2xl">Galería</a>
       <a href="#contacto" data-contacto="" class="block py-3 font-display text-2xl">Contacto</a>
@@ -200,6 +202,35 @@ tailwind.config = {
   </div>
 </section>
 
+<!-- Federarte con nosotros -->
+<section id="federarse" class="py-24 md:py-28 scroll-mt-16">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 grid md:grid-cols-2 gap-12 md:gap-20 items-start">
+    <div class="reveal">
+      <h2 class="font-display italic font-medium uppercase text-3xl md:text-4xl text-army"><span class="titulo-linea">Federarte con nosotros</span></h2>
+      <p class="mt-8 text-graphite leading-relaxed">Los socios y socias del club pueden tramitar su licencia federativa de la Federación de Deportes de Montaña, Escalada y Senderismo de Castilla y León a través del club. Tú te olvidas del papeleo y nosotros lo gestionamos.</p>
+      <p class="mt-4 text-graphite leading-relaxed">Modalidades, coberturas y precios actualizados, en la web de la federación.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#contacto" data-contacto="Quiero federarme" class="inline-flex items-center gap-2 bg-army text-cream px-7 py-3 rounded-md text-sm font-semibold uppercase tracking-[0.12em] hover:bg-army2 transition-colors">Quiero federarme <span class="material-symbols-outlined text-xl">arrow_forward</span></a>
+        <a href="https://www.fdmescyl.es" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-charcoal/25 px-7 py-3 rounded-md text-sm font-semibold uppercase tracking-[0.12em] hover:border-army hover:text-army transition-colors">Web de la federación <span class="material-symbols-outlined text-xl">arrow_outward</span></a>
+      </div>
+    </div>
+    <ol class="reveal border-t border-sand2">
+      <li class="flex gap-6 py-6 border-b border-sand2">
+        <span class="font-mono text-sm text-apricot pt-1">01</span>
+        <div><h3 class="font-display text-2xl">Hazte socio o socia</h3><p class="text-graphite mt-1">La federación se tramita a través del club, así que primero formas parte de la bandada.</p></div>
+      </li>
+      <li class="flex gap-6 py-6 border-b border-sand2">
+        <span class="font-mono text-sm text-apricot pt-1">02</span>
+        <div><h3 class="font-display text-2xl">Cuéntanos que quieres federarte</h3><p class="text-graphite mt-1">Escríbenos desde el formulario de contacto, solo hacen falta tu nombre y tu email.</p></div>
+      </li>
+      <li class="flex gap-6 py-6 border-b border-sand2">
+        <span class="font-mono text-sm text-apricot pt-1">03</span>
+        <div><h3 class="font-display text-2xl">Nosotros tramitamos la licencia</h3><p class="text-graphite mt-1">El club gestiona el alta con la federación y te avisamos cuando esté lista.</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
 <!-- El pueblo -->
 <section id="pueblo" class="bg-night text-cream scroll-mt-16">
   <div class="max-w-6xl mx-auto px-5 md:px-8 py-24 md:py-28 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
@@ -249,6 +280,7 @@ tailwind.config = {
         <div class="flex flex-wrap gap-2" id="temas">
           <label class="cursor-pointer"><input type="radio" name="tema" value="Quiero unirme al club" class="peer sr-only" checked/><span class="block px-4 py-2 rounded-md border border-sand2 text-sm font-medium peer-checked:bg-army peer-checked:border-army peer-checked:text-cream peer-focus-visible:ring-2 ring-apricot transition-colors">Unirme al club</span></label>
           <label class="cursor-pointer"><input type="radio" name="tema" value="Inscripción a una carrera" class="peer sr-only"/><span class="block px-4 py-2 rounded-md border border-sand2 text-sm font-medium peer-checked:bg-army peer-checked:border-army peer-checked:text-cream peer-focus-visible:ring-2 ring-apricot transition-colors">Inscripción carrera</span></label>
+          <label class="cursor-pointer"><input type="radio" name="tema" value="Quiero federarme" class="peer sr-only"/><span class="block px-4 py-2 rounded-md border border-sand2 text-sm font-medium peer-checked:bg-army peer-checked:border-army peer-checked:text-cream peer-focus-visible:ring-2 ring-apricot transition-colors">Federarme</span></label>
           <label class="cursor-pointer"><input type="radio" name="tema" value="Otra consulta" class="peer sr-only"/><span class="block px-4 py-2 rounded-md border border-sand2 text-sm font-medium peer-checked:bg-army peer-checked:border-army peer-checked:text-cream peer-focus-visible:ring-2 ring-apricot transition-colors">Otra consulta</span></label>
         </div>
       </fieldset>
