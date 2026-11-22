@@ -111,7 +111,7 @@ tailwind.config = {
       <div class="absolute inset-0 bg-gradient-to-t from-night/90 via-night/25 to-transparent"></div>
       <div id="txt-act" class="absolute inset-x-0 bottom-0 p-6 md:p-10 text-center text-cream fade-swap">
         <p id="ev-fecha" class="eyebrow text-apricotsoft"></p>
-        <h1 id="ev-titulo" class="font-display font-semibold uppercase text-5xl md:text-7xl leading-[0.95] mt-3"></h1>
+        <h1 id="ev-titulo" class="font-display font-semibold uppercase text-4xl md:text-6xl leading-[0.98] mt-3"></h1>
         <p id="ev-datos" class="font-mono text-sm mt-4 text-cream/85"></p>
         <a href="#contacto" data-contacto="Inscripción a una carrera" class="mt-7 inline-flex items-center gap-3 bg-cream text-army2 font-semibold px-6 py-3 rounded-md hover:bg-apricotsoft transition-colors">Inscribirse <span class="material-symbols-outlined">arrow_forward</span></a>
       </div>
@@ -155,7 +155,7 @@ tailwind.config = {
         <div class="overflow-hidden aspect-[4/3]"><img src="10.jpeg" alt="Corredor del club en un tramo técnico de roca" class="w-full h-full object-cover object-[50%_20%]" loading="lazy"/></div>
         <div class="p-7">
           <p class="eyebrow text-stone">Carrera de trail</p>
-          <h3 class="font-display text-3xl mt-2">Trail rápido</h3>
+          <h3 class="font-display text-3xl mt-2">Speed Trail Pajarero</h3>
           <dl class="mt-5 grid grid-cols-2 gap-4 font-mono text-sm">
             <div><dt class="eyebrow text-stone">Distancia</dt><dd class="mt-1">11 km</dd></div>
             <div><dt class="eyebrow text-stone">Desnivel +</dt><dd class="mt-1">650 m</dd></div>
@@ -166,7 +166,7 @@ tailwind.config = {
         <div class="overflow-hidden aspect-[4/3]"><img src="11.jpeg" alt="Corredor del club en un sendero de piedra" class="w-full h-full object-cover object-[50%_25%]" loading="lazy"/></div>
         <div class="p-7">
           <p class="eyebrow text-stone">Carrera de trail</p>
-          <h3 class="font-display text-3xl mt-2">Trail largo</h3>
+          <h3 class="font-display text-3xl mt-2">Cross Trail Pajarero</h3>
           <dl class="mt-5 grid grid-cols-2 gap-4 font-mono text-sm">
             <div><dt class="eyebrow text-stone">Distancia</dt><dd class="mt-1">23 km</dd></div>
             <div><dt class="eyebrow text-stone">Desnivel +</dt><dd class="mt-1">1.350 m</dd></div>
@@ -190,7 +190,7 @@ tailwind.config = {
       <dl class="md:col-span-7 reveal border-t border-sand2">
         <div class="grid grid-cols-3 gap-4 py-4 border-b border-sand2"><dt class="eyebrow text-stone pt-1">Fechas</dt><dd class="col-span-2">2 y 3 de mayo de 2026</dd></div>
         <div class="grid grid-cols-3 gap-4 py-4 border-b border-sand2"><dt class="eyebrow text-stone pt-1">Lugar</dt><dd class="col-span-2">Santa Cruz del Valle, Ávila</dd></div>
-        <div class="grid grid-cols-3 gap-4 py-4 border-b border-sand2"><dt class="eyebrow text-stone pt-1">Pruebas</dt><dd class="col-span-2">Trail rápido (11 km), trail largo (23 km) y marcha senderista (9 km)</dd></div>
+        <div class="grid grid-cols-3 gap-4 py-4 border-b border-sand2"><dt class="eyebrow text-stone pt-1">Pruebas</dt><dd class="col-span-2">Speed Trail Pajarero (11 km), Cross Trail Pajarero (23 km) y marcha senderista (9 km)</dd></div>
         <div class="grid grid-cols-3 gap-4 py-4 border-b border-sand2"><dt class="eyebrow text-stone pt-1">Horarios</dt><dd class="col-span-2 text-stone">Próximamente</dd></div>
         <div class="grid grid-cols-3 gap-4 py-4 border-b border-sand2"><dt class="eyebrow text-stone pt-1">Recorridos</dt><dd class="col-span-2 text-stone">Próximamente</dd></div>
         <div class="grid grid-cols-3 gap-4 py-4 border-b border-sand2"><dt class="eyebrow text-stone pt-1">Precio</dt><dd class="col-span-2 text-stone">Próximamente</dd></div>
@@ -384,8 +384,8 @@ tailwind.config = {
 
   // Carrusel de pruebas (anterior · actual · siguiente)
   var slides = [
-    { img: '10.jpeg', pos: '50% 20%', alt: 'Corredor del club en un tramo técnico de roca', titulo: 'Trail rápido', fecha: '2-3 mayo 2026', datos: '11 km  ·  +650 m' },
-    { img: '11.jpeg', pos: '50% 25%', alt: 'Corredor del club en un sendero de piedra', titulo: 'Trail largo', fecha: '2-3 mayo 2026', datos: '23 km  ·  +1.350 m' },
+    { img: '10.jpeg', pos: '50% 20%', alt: 'Corredor del club en un tramo técnico de roca', titulo: 'Speed Trail Pajarero', fecha: '2-3 mayo 2026', datos: '11 km  ·  +650 m' },
+    { img: '11.jpeg', pos: '50% 25%', alt: 'Corredor del club en un sendero de piedra', titulo: 'Cross Trail Pajarero', fecha: '2-3 mayo 2026', datos: '23 km  ·  +1.350 m' },
     { img: '3.jpeg', pos: '50% 32%', alt: 'Senderista por un camino de tierra entre campos', titulo: 'Marcha senderista', fecha: '2-3 mayo 2026', datos: '9 km  ·  +350 m' }
   ];
   var cur = 0, timer = null;
